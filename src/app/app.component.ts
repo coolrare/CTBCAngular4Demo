@@ -17,6 +17,11 @@ export class AppComponent {
     console.log(tHeader);
   }
 
+  doDelete(item) {
+    let idx = this.data.indexOf(item);
+    this.data.splice(idx, 1);
+  }
+
   data = [
     {
       'id': 1,

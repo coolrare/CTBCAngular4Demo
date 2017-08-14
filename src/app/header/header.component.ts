@@ -10,6 +10,8 @@ export class HeaderComponent implements OnInit {
   sitename = 'Hello World';
   sitelink = 'https://blog.miniasp.com';
 
+  counter = 0;
+
   constructor() { }
 
   ngOnInit() {
@@ -20,6 +22,17 @@ export class HeaderComponent implements OnInit {
     if ($event.ctrlKey) {
       this.sitename = 'The Will Will Web';
     }
+    this.counter++;
+  }
+
+  isHighlight() {
+    return this.counter%2==0;
+  }
+
+  subtitleClass() {
+    return {
+      highlight: this.isHighlight()
+    };
   }
 
 }

@@ -1,7 +1,7 @@
-<app-header></app-header>
+<app-header #tHeader></app-header>
 
 <!-- CONTAINER START-->
-<section class="container">
+<section class="container" (click)="Show(tHeader)">
     <div class="row">
         <section class="col-md-8 content-wrapper">
             <div id="ctl00_cphBody_divError"></div>

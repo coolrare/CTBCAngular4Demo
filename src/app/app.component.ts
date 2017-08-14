@@ -12,4 +12,8 @@ export class AppComponent {
   doSearch(k) {
     this.keyword = k;
   }
+
+  Show(tHeader) {
+    console.log(tHeader);
+  }
 }
